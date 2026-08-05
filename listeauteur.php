@@ -3,36 +3,46 @@ require 'data.php';
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
+<meta charset="UTF-8">
+<title>Ajouter auteur</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
 <?php include 'nav.php'; ?>
 
-<h2>Liste des auteurs</h2>
 
-<table>
+<h2>Ajouter un auteur</h2>
 
-<tr>
-<th>ID</th>
-<th>Prénom</th>
-<th>Nom</th>
-</tr>
 
-<?php foreach($_SESSION['auteurs'] as $auteur){ ?>
+<form action="traitementajout.php" method="post">
 
-<tr>
-<td><?= $auteur['id'] ?></td>
-<td><?= $auteur['prenom'] ?></td>
-<td><?= $auteur['nom'] ?></td>
-</tr>
+<input 
+type="text"
+name="prenom"
+placeholder="Prénom"
+required>
 
-<?php } ?>
 
-</table>
+<input 
+type="text"
+name="nom"
+placeholder="Nom"
+required>
+
+
+<button type="submit">
+Ajouter
+</button>
+
+
+</form>
+
 
 </body>
 </html>
