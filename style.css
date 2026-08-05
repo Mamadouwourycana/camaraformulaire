@@ -1,45 +1,69 @@
 body{
-    font-family: Arial;
-    margin:40px;
-    background:#f4f4f4;
+
+font-family: Arial;
+margin:40px;
+
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
+
+nav{
+
+margin-bottom:30px;
+
 }
 
-th,td{
-    border:1px solid #ccc;
-    padding:10px;
-}
-
-th{
-    background:#0077cc;
-    color:white;
-}
 
 nav a{
-    text-decoration:none;
-    margin-right:20px;
-    color:#0077cc;
-    font-weight:bold;
+
+text-decoration:none;
+margin-right:20px;
+color:blue;
+
 }
+
+
 
 form{
-    background:white;
-    padding:20px;
-    width:400px;
+
+display:flex;
+flex-direction:column;
+width:300px;
+gap:15px;
+
 }
+
+
 
 input{
-    width:100%;
-    padding:10px;
-    margin-top:10px;
+
+padding:10px;
+
 }
 
+
+
 button{
-    margin-top:15px;
-    padding:10px;
+
+padding:10px;
+background:black;
+color:white;
+border:none;
+
+}
+
+
+
+table{
+
+margin-top:20px;
+border-collapse:collapse;
+
+}
+
+
+
+td,th{
+
+padding:10px;
+
 }
