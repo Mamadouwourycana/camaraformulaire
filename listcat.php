@@ -1,34 +1,66 @@
 <?php
 require 'data.php';
+
+function getAuteur($id)
+{
+    foreach ($_SESSION['auteurs'] as $auteur) {
+        if ($auteur['id'] == $id) {
+            return $auteur['prenom'] . " " . $auteur['nom'];
+        }
+    }
+    return "Inconnu";
+}
+
+function getCategorie($id)
+{
+    foreach ($_SESSION['categories'] as $categorie) {
+        if ($categorie['id'] == $id) {
+            return $categorie['nom'];
+        }
+    }
+    return "Inconnue";
+}
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Liste des livres</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <?php include 'nav.php'; ?>
 
-<h2>Liste des catégories</h2>
+<h2>Liste des livres</h2>
 
-<table>
+<table border="1" cellpadding="8">
 
-<tr>
-<th>ID</th>
-<th>Nom</th>
-</tr>
+    <tr>
+        <th>ID</th>
+        <th>Titre</th>
+        <th>Catégorie</th>
+        <th>Auteur</th>
+        <th>Année</th>
+        <th>Pages</th>
+        <th>Disponible</th>
+    </tr>
 
-<?php foreach($_SESSION['categories'] as $categorie){ ?>
+    <?php foreach ($_SESSION['livres'] as $livre) { ?>
 
-<tr>
-<td><?= $categorie['id'] ?></td>
-<td><?= $categorie['nom'] ?></td>
-</tr>
+    <tr>
+        <td><?= $livre['id']; ?></td>
+        <td><?= $livre['titre']; ?></td>
+        <td><?= getCategorie($livre['categorie']); ?></td>
+        <td><?= getAuteur($livre['auteur']); ?></td>
+        <td><?= $livre['annee']; ?></td>
+        <td><?= $livre['pages']; ?></td>
+        <td><?= $livre['disponible']; ?></td>
+    </tr>
 
-<?php } ?>
+    <?php } ?>
 
 </table>
 
