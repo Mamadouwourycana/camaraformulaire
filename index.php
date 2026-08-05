@@ -13,7 +13,7 @@ require 'data.php';
 
 <?php include 'nav.php'; ?>
 
-<h1 >Bienvenue dans la bibliothèque</h1>
-<p>Choisissez une option dans le menu.</p>
+<h1 class="te">Bienvenue dans la bibliothèque</h1>
+<p class="te">Choisissez une option dans le menu.</p>
 </body>
 </html>

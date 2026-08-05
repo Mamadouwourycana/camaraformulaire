@@ -16,9 +16,4 @@ $_SESSION['auteurs'][] = [
 
 ];
 
-
-header("Location: auteurs.php");
-
-exit;
-
 ?>
