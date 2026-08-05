@@ -2,19 +2,22 @@
 
 require 'data.php';
 
-$id = count($_SESSION['auteurs']) + 1;
+
+$nouvelId = count($_SESSION['auteurs']) + 1;
+
 
 $_SESSION['auteurs'][] = [
 
-"id"=>$id,
+    "id"=>$nouvelId,
 
-"prenom"=>$_POST['prenom'],
+    "prenom"=>$_POST['prenom'],
 
-"nom"=>$_POST['nom']
+    "nom"=>$_POST['nom']
 
 ];
 
-header("Location: listeauteurs.php");
+
+header("Location: auteurs.php");
 
 exit;
 
