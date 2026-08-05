@@ -1,7 +1,6 @@
 <?php
 require 'data.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
